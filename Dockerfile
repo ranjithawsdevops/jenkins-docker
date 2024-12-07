@@ -17,7 +17,7 @@ RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.24/bin/apache-tomc
     && rm apache-tomcat-${TOMCAT_VERSION}.tar.gz
 
 # Copy the addressbook.war into the Tomcat webapps directory
-COPY jenkins-docker/addressbook/addressbook_main/target/addressbook.war ${TOMCAT_HOME}/webapps/
+COPY addressbook/addressbook_main/target/addressbook.war ${TOMCAT_HOME}/webapps/
 
 # Expose the default Tomcat HTTP port (8080)
 EXPOSE 8080
